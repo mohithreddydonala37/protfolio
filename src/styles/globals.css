@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Onest:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #08080A;
+    --foreground: #F3F1EA;
+    --muted: #807F78;
+    --surface: #111114;
+    --surface-2: #17171B;
+    --border: rgba(243, 241, 234, 0.10);
+    --border-strong: rgba(243, 241, 234, 0.22);
+    --accent: #FF3B1D;
+    --accent-2: #FF6A3D;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased selection:bg-accent selection:text-white overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
