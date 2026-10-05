@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import heroImage from '../../assets/hero.png'
 
 export function HeroPortrait() {
   return (
@@ -14,13 +15,9 @@ export function HeroPortrait() {
         
         <div className="relative w-full md:w-3/4 max-w-4xl h-full flex justify-end md:justify-center">
            <img 
-             src="/src/assets/profile/mohith-hero.webp" 
+             src={heroImage}
              alt="Mohith Reddy"
-             className="object-cover object-bottom h-full w-auto max-w-none md:max-w-full mix-blend-luminosity opacity-80"
-             onError={(e) => {
-               // Fallback if the user hasn't added the image yet
-               (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?q=80&w=2787&auto=format&fit=crop"
-             }}
+             className="object-cover object-top h-full w-auto max-w-none md:max-w-full"
            />
         </div>
       </motion.div>
